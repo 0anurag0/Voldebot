@@ -1,0 +1,19 @@
+# clone the repo
+git clone https://github.com/code-rgb/userge-x.git
+cd userge-x
+
+# create virtualenv
+virtualenv -p /usr/bin/python3 venv
+. ./venv/bin/activate
+
+# install requirements
+pip install -r requirements.txt
+
+# Create config.env as given config.env.sample and fill that
+cp config.env.sample config.env
+
+# get string session and add it to config.env
+bash genStr
+
+# finally run the USERGE-X ;)
+bash run
